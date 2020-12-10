@@ -1,0 +1,32 @@
+<div>
+  <h2 class="h2-subtitles">Event Details!</h2>
+  <div class="seeMoreContainer">
+    <div><img src="{{image}}"></div>
+    <div class="seeMoreCard">
+      <h2 class="card-title"> {{title}}</h2>
+      <p class="seeMorecardcity">{{city}}</p>
+      <p> {{date}}</p>
+      <div class="description">
+        <span class="card-description">{{description}}</span> 
+      </div>
+      <p>Girls joining this event:</p>
+      <div class="attendees">
+      {{#each attendees }}
+        <p> 
+        {{this.userId.nickname}}
+        </p>
+      {{/each}}
+      </div>
+    </div>
+  </div>
+       <form id="buttondetail" action="/allEvents" method="POST">
+       <button class="attendButton">I want to attend!</button>
+       <input type="hidden" name="eventId" value="{{_id}}"> 
+       </form>
+    {{#if errorMessage}}
+  <p class="error-message">
+    {{ errorMessage }}
+  </p>
+{{/if}}   
+
+</div>

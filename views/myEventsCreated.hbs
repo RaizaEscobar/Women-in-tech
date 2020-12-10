@@ -1,0 +1,36 @@
+<div>
+  <h2 class="h2-subtitles">My events</h2>
+  <div class="grid">
+    {{#each modifiedEvents}}
+    <div class="grid__item">
+      <img class="card__img"  src="{{this.image}}"/>
+      <div class="card__content"> 
+      <h3 class="card__header">{{this.title}}</h3>
+      <p class="card__text">{{this.date}}</p>
+      </div>
+          <div  class="flex createEventsbuttons">
+          <form action= "/delete" method="POST">
+            <input type="hidden" name="id" value="{{this._id}}">
+            <button class="blue">Cancel event</button>
+          </form>
+          <button onclick="window.location='/modifyEvents/{{this._id}}'"> Modify Event</button>
+          </div>
+
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+
+
+ 
+  
+      
+      
+        
+        
+        
+        
+       
+        
+  

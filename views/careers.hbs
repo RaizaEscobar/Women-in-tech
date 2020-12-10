@@ -1,0 +1,39 @@
+
+<section>
+  <h2 class="h2-subtitles" id="media-h2-subtitles">Companies commited to diversity</h2>
+  <div class="logosCareer">
+    <img src="/images/logos/ironhack.png">
+    <img src="/images/logos/google.png">
+    <img src="/images/logos/facebook.png">
+    <img src="/images/logos/cabify.png">
+  </div>
+</section>
+
+<h2 class="h2-subtitles" id="media-h2-subtitles" >Career Events</h2>
+<div class="grid">
+  {{#each careerEvents}}
+<li class="card" aria-labelledby="event card">
+    <div class="card__filter">
+        <img class="card__photo" src="/images/background/2.jpg">
+    </div>
+    <div class="card__container">
+        <h2>{{this.title}}</h2>
+        <time>{{this.date}}</time>
+        <p>{{this.city}}</p>
+        <p>Limit of Participants {{this.limitPax}}</p>
+        <p>Number of companies: {{this.companies}}</p>
+        <p>Price: {{this.price}} EUR</p>
+        <div class="card__buttons">
+            <a href="/careersDetails" class="card__buttons btn primary" role="button" aria-haspopup="false">
+          Details
+          <div class="card__fill"></div>
+        </a>
+            <a href="#" class="card__buttons btn secondary" role="button" aria-haspopup="false">
+          Tickets
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        </div>
+    </div>
+</li>
+{{/each}}
+</div>

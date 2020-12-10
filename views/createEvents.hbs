@@ -1,0 +1,41 @@
+<div id="createEvents">
+    <section class="search">
+        <form action="/createEvents" method="post">
+        <h2>Create a new Event</h2>
+            <div class="form-field">
+                <label for="title-input">Title of the event:</label>
+                <input type="search" name="title">
+            </div>
+            <div class="form-field">
+                <label for="city-input"> City: </label>
+                <input type="text" name="city" id="city-input" >
+            </div>
+            <div class="form-field">
+                <label for="date-input"> Date: </label>
+                <input type="date" name="date" id="date-input" value="date">
+            </div>
+
+            <label class="form-field" for="type">Type:</label>
+            <select class="form-field" name="type">
+                <option value="conference">Conference</option>
+                <option value="meet up">Meet up</option>
+                <option value="course">Course</option>
+                <option value="talk">Talk</option>
+                <option value="other">Other</option>
+            </select>
+
+            <div class="form-field">
+                <label for="description-input"> Description: </label>
+               <textarea name="description" id="description-input" ></textarea>
+            </div>
+
+            {{#if errorMessage}}
+            <p class="error-message">
+                {{ errorMessage }}
+            </p>
+            {{/if}}
+            <button> Publish your event!</button>
+        </form>
+    </section>
+</div>
+   

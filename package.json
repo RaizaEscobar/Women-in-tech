@@ -1,0 +1,45 @@
+{
+  "name": "proyectomodulo2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "dev-windows": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.3",
+    "dateformat": "^3.0.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.3",
+    "express-hbs": "^2.3.4",
+    "express-session": "^1.17.1",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.2.10",
+    "morgan": "^1.9.0",
+    "node-sass-middleware": "^0.11.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "description": "Application made by women for women! The purpose of our application is to close the gender gap that exists in the tech industry, by helping women who work in the tech sector to network through events. Our main goal is to motivate more women to build businesses or to choose a career in the digital industry because we believe the future of tech is female ",
+  "main": "app.js",
+  "bin": {
+    "proyectomodulo2": "seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erifylo/proyectoModulo2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erifylo/proyectoModulo2/issues"
+  },
+  "homepage": "https://github.com/erifylo/proyectoModulo2#readme"
+}

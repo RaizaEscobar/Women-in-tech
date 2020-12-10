@@ -1,0 +1,32 @@
+
+{{!-- CENTER OF THE PAGE --}}
+
+  <section class="coverSection">
+      <div class = "banner-title">
+        <h1> Women In Tech  <span> because computing <br> is too important</span>  to be left to men </h1>
+        <button onclick="window.location='/signup'"> Join us!</button>
+    </div>
+  </section>
+
+{{!-- EVENT PREVIEW --}}
+<div class="grid">
+  {{#each modifiedEvents}}
+<div class="grid__item">
+      <img class="card__img"  src="{{this.image}}"/>
+      <div class="card__content"> 
+        <h3 class="card__header">{{this.title}}</h3>
+        <p class="card__text">{{this.city}}</p>
+        <p class="card__text">{{this.date}}</p>
+        </div>
+        <div class="flex">
+          {{#if userLogged}}
+        <button onclick="window.location='/allEvents/{{this._id}}'"> See More</button>
+          {{else}}
+         <button onclick="window.location='/signup'"> See More</button> 
+          {{/if}}
+        </div>  
+  </div>
+      {{/each}}
+</div>
+
+

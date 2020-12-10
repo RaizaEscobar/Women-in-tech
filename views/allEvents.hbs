@@ -1,0 +1,41 @@
+
+<div id="allEvents">
+<section class="search">
+			<form  action="/allEvents" method="get">
+      <h2>Search an Event</h2>
+			<div  class="form-field">
+				<label for="gsearch">City:</label>
+				<input type="search" name ="city" placeholder="Search by city">
+			</div>
+			<div class="form-field">
+				<label for="date">Date:</label>
+				<input type="date" id="date" name="date">
+			</div> 
+      <label class="form-field" for="type">Type:</label>
+			<select class= "form-field" name="type">        	
+				<option value="all">All</option>
+        <option value="conference">Conference</option>
+        <option value="meet up">Meet up</option>
+        <option value="course">Course</option>
+        <option value="talk">Talk</option>
+        <option value="other">Other</option>
+      </select>
+			<button>Search!</button>
+		</form>
+	</section>
+<div class="grid">
+{{#each modifiedEvents}}
+<div class="grid__item">
+      <img class="card__img"  src="{{this.image}}"/>
+      <div class="card__content"> 
+        <h3 class="card__header">{{this.title}}</h3>
+        <p class="card__text">{{this.city}}</p>
+        <p class="card__text">{{this.date}}</p>
+        </div>
+        <div class="flex">
+        <button onclick="window.location='/allEvents/{{this._id}}'"> See More</button>
+        </div>  
+  </div>
+      {{/each}}
+  </div>
+  </div>

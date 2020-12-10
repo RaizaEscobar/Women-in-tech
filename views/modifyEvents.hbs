@@ -1,0 +1,44 @@
+
+
+<div id="modifyEvents">
+    <section class="search">
+        <form action="/modifyEvents" method="post">
+        <h2> Modify your Event</h2>
+        <input type="hidden" name="id" value="{{_id}}">
+            <div class="form-field">
+                <label for="title-input"> Title of the event: </label>
+                 <input type="text" name="title" id="title-input" value="{{title}}">
+            </div>
+            <div class="form-field">
+                <label for="city-input"> City: </label>
+                <input type="text" name="city" id="city-input" value="{{city}}">
+            </div>
+            <div class="form-field">
+               <label for="date-input"> Date: </label>
+              <input type="date" name="date" id="date-input" value="{{date}}">
+            </div>
+
+            <label class="form-field" for="type">Type of the Event:</label>
+            <select class="form-field" name="type">
+                 <option value="conference" {{#if isConferenceSelected}}selected{{/if}}>Conference</option>
+                 <option value="meet up" {{#if isMeetUpSelected}}selected{{/if}}>Meet up</option>
+                 <option value="course" {{#if isCourseSelected}}selected{{/if}}>Course</option>
+                 <option value="talk" {{#if isTalkSelected}}selected{{/if}}>Talk</option>
+                 <option value="other" {{#if isOtherSelected}}selected{{/if}}>Other</option>
+            </select>
+
+            <div class="form-field">
+                     <label for="description-input"> Description: </label>
+        <textarea type="text" name="description">{{description}}</textarea>
+            </div>
+
+            {{#if errorMessage}}
+            <p class="error-message">
+                {{ errorMessage }}
+            </p>
+            {{/if}}
+            <button> Save the changes!</button>
+        </form>
+    </section>
+</div>
+   

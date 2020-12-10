@@ -1,0 +1,23 @@
+<div>
+  <h2 class="h2-subtitles">Events I am attending</h2>
+  <div class="grid">
+  {{#each modifiedEvents}}
+  <div class="grid__item">
+      <img class="card__img"  src="{{this.image}}"/>
+      <div class="card__content"> 
+        <h3 class="card__header">{{this.title}}</h3>
+        <p class="card__text">{{this.city}}</p>
+        <p class="card__text">{{this.date}}</p>
+        </div>
+        <div class="flex createEventsbuttons">
+        <form action="/notAttendEvents" method="POST">
+          <input type="hidden" name="id" value={{this._id}}> 
+          <button >Not attend</button>
+        </form>
+        <button class="blue" onclick="window.location='/allEvents/{{this._id}}'"> See More</button>
+        </div>
+      
+  </div>
+  {{/each}}
+  </div>
+</div>
